@@ -1,0 +1,29 @@
+@Comment = React.createClass
+  render: ->
+    React.DOM.div
+      className: 'comments'
+      React.DOM.h2
+        className: 'title'
+        'Comments'
+      React.DOM.table
+        className: 'table table-bordered'
+        React.DOM.thead null,
+          React.DOM.tr null,
+            React.DOM.th null, 'Author'
+            React.DOM.th null, 'Text'
+        React.DOM.tbody null,
+          for record in @state.records
+            React.createElement Record, key: record.id, record: record
+
+
+@Comments = React.createClass
+  getInitialState: ->
+    comments: @props.data
+    comments: []
+  getDefaultProps: ->  
+  render: ->
+    React.DOM.div
+      className: 'comments'
+      React.DOM.h2
+        className: 'title'
+        'Comments'

@@ -1,0 +1,9 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Comments</h1>
+
+<%= react_component 'Comments', { data: @comments } %>
+
+<br>
+
+<%= link_to 'New Comment', new_comment_path %>
